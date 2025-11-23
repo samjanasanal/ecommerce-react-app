@@ -3,8 +3,10 @@
 import { useState } from "react"
 import ProductCard from "./ProductCard"
 import { Plus } from "lucide-react"
+import AddProductModal from "./AddProductModal"
 
 export default function ProductGrid({ products }) {
+  const [showAddModal, setShowAddModal] = useState(false)
 
   return (
     <div>
@@ -40,6 +42,9 @@ export default function ProductGrid({ products }) {
           </button>
         </div>
       )}
+
+      {/* Add Product Modal */}
+      <AddProductModal isOpen={showAddModal} onClose={() => setShowAddModal(false)} />
     </div>
   )
 }
