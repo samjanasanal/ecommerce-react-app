@@ -47,7 +47,7 @@ export default function Home() {
             Discover Premium Products
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Browse our curated collection of quality products. Create, edit, and manage your store with ease.
+            Browse our collection of quality products at unbeatable prices.
           </p>
 
           {/* Search Bar */}

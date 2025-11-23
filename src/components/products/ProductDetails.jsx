@@ -78,11 +78,6 @@ export default function ProductDetails({ product }) {
               <p className="text-muted-foreground leading-relaxed">{localProduct.description}</p>
             </div>
 
-            {/* Stock Info */}
-            <div className="mb-8 p-4 bg-accent/10 rounded-lg border border-accent/20">
-              <p className="text-sm text-foreground font-medium">✓ In Stock - Ready to ship</p>
-            </div>
-
             <div className="flex gap-3">
               <button
                 onClick={() => setIsEditing(true)}
