@@ -28,7 +28,7 @@ export default function ProductDetails({ product }) {
   return (
     <div>
       {/* Back Button */}
-      <Link to="/" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 mb-8 transition-colors">
+      <Link to="/" className="inline-flex items-center gap-2 text-primary hover:opacity-80 mb-8 transition-colors">
         <ArrowLeft className="w-4 h-4" />
         Back to Products
       </Link>
@@ -37,7 +37,6 @@ export default function ProductDetails({ product }) {
         <EditProductForm product={localProduct} onUpdate={handleUpdate} onCancel={() => setIsEditing(false)} />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left - Image */}
           <div className="border border-border bg-card p-6 rounded-lg flex items-center justify-center h-96">
             <img
               src={localProduct.image || "/placeholder.svg"}
@@ -46,7 +45,6 @@ export default function ProductDetails({ product }) {
             />
           </div>
 
-          {/* Right - Details */}
           <div>
             {/* Category Badge */}
             <span className="inline-block text-xs font-semibold text-primary-foreground bg-primary px-3 py-1 rounded-full capitalize mb-4">
@@ -69,7 +67,6 @@ export default function ProductDetails({ product }) {
             {/* Price */}
             <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-6">
               <p className="text-4xl font-bold text-foreground">${localProduct.price.toFixed(2)}</p>
-              <p className="text-sm text-muted-foreground mt-2">Free shipping on orders over $50</p>
             </div>
 
             {/* Description */}

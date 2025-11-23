@@ -17,7 +17,7 @@ export default function ProductGrid({ products }) {
         </h2>
         <button
           onClick={() => setShowAddModal(true)}
-          className="flex items-center justify-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-md transition-colors"
+          className="flex items-center justify-center gap-2 px-4 py-2 bg-primary hover:bg-opacity-90 text-primary-foreground rounded-md transition-colors"
         >
           <Plus className="w-4 h-4" />
           New Product
@@ -34,12 +34,6 @@ export default function ProductGrid({ products }) {
       ) : (
         <div className="text-center py-12">
           <p className="text-muted-foreground text-lg mb-4">No products found</p>
-          <button
-            onClick={() => setShowAddModal(true)}
-            className="px-4 py-2 border border-primary text-primary rounded-md hover:bg-primary/10 transition-colors"
-          >
-            Add the first product
-          </button>
         </div>
       )}
 

@@ -43,9 +43,7 @@ export default function Home() {
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4 text-balance">
-            Discover Premium Products
-          </h1>
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Discover Premium Products</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Browse our collection of quality products at unbeatable prices.
           </p>

@@ -15,7 +15,7 @@ export default function ProductCard({ product }) {
           alt={product.title}
           className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity" />
       </div>
 
       <div className="p-4 flex flex-col flex-1">
@@ -41,7 +41,7 @@ export default function ProductCard({ product }) {
         </div>
 
         <Link to={`/product/${product.id}`} className="w-full mt-auto">
-          <button className="w-full px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-md transition-colors flex items-center justify-center gap-1 text-sm">
+          <button className="w-full px-4 py-2 bg-primary hover:bg-opacity-90 text-primary-foreground rounded-md transition-colors flex items-center justify-center gap-1 text-sm">
             <Eye className="w-4 h-4" />
             View Details
           </button>

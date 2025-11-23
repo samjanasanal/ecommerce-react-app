@@ -5,11 +5,16 @@ import ProductDetails from "../components/products/ProductDetails"
 import LoadingSpinner from "../components/ui/LoadingSpinner"
 import ErrorMessage from "../components/ui/ErrorMessage"
 import { useProducts } from "../context/ProductContext"
+import { useEffect } from "react"
 
 export default function ProductDetailsPage() {
   const { id } = useParams()
   const navigate = useNavigate()
   const { products, loading } = useProducts()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const product = products.find((p) => p.id === Number.parseInt(id))
 

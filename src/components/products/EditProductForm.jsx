@@ -153,7 +153,7 @@ export default function EditProductForm({ product, onUpdate, onCancel }) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground rounded-md py-2 flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
+            className="flex-1 bg-primary hover:bg-opacity-90 text-primary-foreground rounded-md py-2 flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
           >
             {isSubmitting && <Loader2 className="w-4 h-4 animate-spin" />}
             {isSubmitting ? "Saving..." : "Save Changes"}
