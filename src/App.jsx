@@ -3,25 +3,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import "./App.css"
+import { ProductProvider } from './context/ProductContext'
+import ProductDetailsPage from './pages/ProductDetailsPage'
 
 function App() {
 
   return (
     <>
      <Router>
-      {/* <ProductProvider> */}
+      <ProductProvider>
         <div className="flex flex-col min-h-screen bg-background">
           <Header />
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
-              {/* <Route path="/product/:id" element={<ProductDetailsPage />} /> */}
+               <Route path="/product/:id" element={<ProductDetailsPage />} />
             </Routes>
           </main>
           <Footer />
         </div>
-      {/* </ProductProvider> */}
+      </ProductProvider>
     </Router>
       
     </>
